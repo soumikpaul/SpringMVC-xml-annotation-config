@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	<bean id="ClassBean" class="com.example.Student.ClassRoom">
+		<property name="Students">
+			<array>
+				<ref bean="StdBean1" />
+				<ref bean="StdBean2" />
+			</array>
+		</property>
+	</bean>
+	<bean id="StdBean1" class="com.example.Student.Student">
+		<property name="name">
+			<value>Soumik</value>
+		</property>
+		<property name="age">
+			<value>22</value>
+		</property>
+		<property name="StdId">
+			<value>01</value>
+		</property>
+		<property name="gender">
+		<value>Male</value>
+		</property>
+	</bean>
+	<bean id="StdBean2" class="com.example.Student.Student">
+		<property name="name">
+			<value>Paul</value>
+		</property>
+		<property name="age">
+			<value>12</value>
+		</property>
+		<property name="StdId">
+			<value>02</value>
+		</property>
+		<property name="gender">
+		<value>Male</value>
+		</property>
+	</bean>
+
+	<!-- <context:component-scan base-package="org.example"/> -->
+</beans>
